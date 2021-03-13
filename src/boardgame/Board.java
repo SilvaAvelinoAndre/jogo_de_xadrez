@@ -1,16 +1,17 @@
-package boardgame;
+package boardgame;// pacote tabuleiro de xadrez
 
-public class Board {
+public class Board {// Board - classe que representa o tabuleiro dentro do boardgame que 
+					// o tabuleiro de xadrez.
 
-	private int rows;
-	private int columns;
-	private Piece[][] pieces;
+	private int rows;// linhas do tabuleiro
+	private int columns;// colunas do tabuleiro
+	private Piece[][] pieces; // matriz para demarcar todas as posições no tabuleiro.
 	
 	
 	public Board(int rows, int columns) {
 		this.rows = rows;
 		this.columns = columns;
-		pieces = new Piece[rows][columns];
+		pieces = new Piece[rows][columns]; // estanciada a matriz  no construtor, passando os valores de linhas e colunas
 	}
 
 
@@ -33,5 +34,10 @@ public class Board {
 		this.columns = columns;
 	}
 	
-	
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	public Piece piece(Position position) {
+		return pieces[position.getRow()][position.getColumn()];
+	}
 }

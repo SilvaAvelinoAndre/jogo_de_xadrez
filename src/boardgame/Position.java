@@ -1,6 +1,6 @@
 package boardgame;
 
-public class Position {
+public class Position { // classe que retorna a posição da peça com o toString. 
 
 		private int row;
 		private int column;
