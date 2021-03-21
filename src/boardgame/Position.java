@@ -31,6 +31,10 @@ public class Position { // classe que retorna a posição da peça com o toString.
 			this.column = column;
 		}
 		
+		public void setValues(int row, int column) {
+			this.row = row;
+			this.column = column;
+		}
 		
 		@Override
 		public String toString() {
